@@ -6,6 +6,7 @@
 }
 
 .land{
+    position: relative;
     background-color: green;
     height: 150px;
     width: 200%;
@@ -32,4 +33,9 @@
     border-radius: 50%;
     left: 20px;
     top: -40px;
+}
+
+button{
+    position: sticky;
+    /* z-index: 10; */
 }
