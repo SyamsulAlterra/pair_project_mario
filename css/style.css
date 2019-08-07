@@ -32,15 +32,24 @@
     background-color: red;
     border-radius: 50%;
     left: 20px;
-    top: -40px;
+    bottom: 0px;
 }
 
-
-.kotak{
-    height: 100px;
+/* obstacle css */
+.kotak-A{
+    height: 350px;
     width: 50px;
     background-color: yellow;
     position: absolute;
     left: 200px;
+    top: 0px;
+}
+
+.kotak-B{
+    height: 100px;
+    width: 50px;
+    background-color: purple;
+    position: absolute;
+    left: 500px;
     bottom: 0px;
 }
