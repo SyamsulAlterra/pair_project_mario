@@ -35,7 +35,12 @@
     top: -40px;
 }
 
-button{
-    position: sticky;
-    /* z-index: 10; */
+
+.kotak{
+    height: 100px;
+    width: 50px;
+    background-color: yellow;
+    position: absolute;
+    left: 200px;
+    bottom: 0px;
 }
