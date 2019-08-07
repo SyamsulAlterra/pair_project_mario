@@ -53,3 +53,24 @@
     left: 500px;
     bottom: 0px;
 }
+
+.koin{
+    background-color: gold;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 1000px;
+    bottom: 0px;
+    border-radius: 50%;
+}
+
+.lubang{
+    background-color:rgb(145, 145, 202);
+    height: 20px;
+    width: 20px;
+    margin: 5px auto;
+    
+    /* left: 0px;
+    bottom: 0px; */
+    border-radius: 50%;
+}

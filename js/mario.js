@@ -1,21 +1,50 @@
+let sky = document.getElementsByClassName('sky')[0]
+
 let mario = document.getElementById('mario')
 let marioX = parseInt(getComputedStyle(mario).left, 10)
 let marioY = parseInt(getComputedStyle(mario).bottom, 10)
 
-// function navigate(event){
-//     let button = event.keyCode
-//     let mario = document.getElementById(mario)
+let koin = document.getElementsByClassName('koin')[0]
+let koinAttribute = getComputedStyle(koin)
+koinList = [koin]
 
-//     mario.style.left = 100+'px'
-//     mario.style.top = -100+'px'
-// }
+
+function newKoin(x, y){
+    let newKoin = koin.cloneNode(true)
+    newKoin.className += koinList.length.toString()
+    for (let i=0; i<koinAttribute.length; i++ ){
+        attrName = koinAttribute[i]
+        newKoin.style[attrName] = koinAttribute[attrName]
+    }
+    
+    newKoin.style.left=x+'px'
+    newKoin.style.top=445-y-30+'px'
+    
+    sky.appendChild(newKoin)
+    koinList.push(newKoin)
+}
+
+newKoin(1200,100)
+newKoin(100,200)
+newKoin(800,0)
+
+console.log(445-parseInt(getComputedStyle(koinList[1]).top,10))
+
 
 function isCollide(a, b){
     if ( (a > 160 && a < 240) && b>60){
         return true
     }
 
-    if (a>460){
+    if ((a>460 && a<550) && b<100) {
+        return true
+    }
+
+    return false
+}
+
+function getCoin(a, b){
+    if ( (a>760 && a< 820) && b<30 ){
         return true
     }
 
@@ -37,6 +66,10 @@ function jump(event){
         if (isCollide(marioX, marioY)){
             alert('game over')
             location.reload()
+        }
+
+        if (getCoin(marioX, marioY)) {
+            koinList[3].style.opacity = 0
         }
         
         if (dist < 100){
@@ -62,6 +95,10 @@ function move(event) {
             if (isCollide(marioX, marioY)){
                 alert('game over')
                 location.reload()
+            }
+
+            if (getCoin(marioX, marioY)){
+                koinList[3].style.opacity = 0  
             }
 
             if (k == 65 || k == 33) {
