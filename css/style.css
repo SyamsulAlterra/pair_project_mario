@@ -1,7 +1,12 @@
 /* body css */
+canvas{
+    height: 700px;
+    width: 100%;
+}
+
 .sky{
     height: 445px;
-    width: 200%;
+    width: 100%;
     background-color: rgb(145, 145, 202);
 }
 
@@ -9,7 +14,7 @@
     position: relative;
     background-color: green;
     height: 150px;
-    width: 200%;
+    width: 100%;
 }
 
 .no-padding{
@@ -54,6 +59,15 @@
     bottom: 0px;
 }
 
+.kotak-C{
+    height: 100px;
+    width: 50px;
+    background-color: purple;
+    position: absolute;
+    left: 1000px;
+    bottom: 50px;
+}
+
 .koin{
     background-color: gold;
     height: 30px;
@@ -73,4 +87,14 @@
     /* left: 0px;
     bottom: 0px; */
     border-radius: 50%;
+}
+
+.musuh{
+    background-color: black;
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
 }
