@@ -4,47 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-        canvas {
-            border: 1px solid black;
-            background-color: blue;
-        }
-    </style>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        canvas {
+            border:1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
     <title>Document</title>
 </head>
-<body>
-    <div class="container-fluid no-padding">
-        
-        <div class="row">
-            <div class="col no-padding">
-                <div class="sky">
-                    <!-- <p class="align-center">This is sky</p> -->
-                    <div class="kotak-A">
+<body onload="launchEnemy()">
+    <button onclick="playAudio()">lagu</button>
+    <audio id="bg-music">
+        <source src="./melodyloops-preview-happy-moments-in-life-2m30s.mp3" type="audio/ogg">
+    </audio>
+        <div class="container-fluid no-padding">
+            
+            <div class="row">
+                <div class="col no-padding">
+                    <div class="sky">
+                        <div class="kotak-A"></div>
+    
+                        <div class="kotak-B"></div>
 
+                        <div class="kotak-C"></div>
+    
+                        <div class="koin">
+                            <div class="lubang"></div>
+                        </div>
+    
+                        <div id="mario"></div>
+
+                        <div class="musuh"></div>
                     </div>
-
-                    <div class="kotak-B">
-
-                    </div>
-
-                    <div id="mario"></div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col no-padding">
-                <div class="land">
-                    
+    
+            <div class="row">
+                <div class="col no-padding">
+                    <div class="land">
+                        
+                    </div>
                 </div>
             </div>
+    
+            <button onclick="jumping()">JUMP</button>
         </div>
 
-        <button onclick="jump()">move</button>
-    </div>
-
-    <script src="js/mario.js"></script>
 </body>
+<script src="js/mario.js"></script>
 </html>
+
